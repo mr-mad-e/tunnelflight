@@ -21,6 +21,9 @@
     <title>Hello, world!</title>
 
     <style>
+      .progress {
+        height: 0.5rem;
+      }
       .mb-80 {
         margin-bottom: 80px;
       }
@@ -57,7 +60,7 @@
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link active"
+          class="nav-link"
           id="card-tab"
           data-bs-toggle="tab"
           data-bs-target="#card"
@@ -71,7 +74,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link"
+          class="nav-link active"
           id="flyer-tab"
           data-bs-toggle="tab"
           data-bs-target="#flyer"
@@ -113,10 +116,10 @@
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="card" role="tabpanel" aria-labelledby="card-tab">
+      <div class="tab-pane fade" id="card" role="tabpanel" aria-labelledby="card-tab">
         CARD content
       </div>
-      <div class="tab-pane fade" id="flyer" role="tabpanel" aria-labelledby="flyer-tab">
+      <div class="tab-pane fade show active" id="flyer" role="tabpanel" aria-labelledby="flyer-tab">
         <div class="container p-4">
           <div class="mb-4 row justify-content-center justify-content-xl-end">
             <div class="col-12 col-sm-8 col-lg-6">
@@ -164,7 +167,11 @@
                       <div class="accordion-body">
                         <div class="row">
                           <div class="col-12 col-lg-6 col-xl-4">
-                            <div class="mb-2 p-2 rounded border border-2 border-warning">
+                            <div
+                              class="btn mb-2 p-2 rounded border border-2 border-warning"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                            >
                               Head Up Out Face (LS)
                               <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
                             </div>
@@ -678,11 +685,713 @@
         </div>
       </div>
       <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
-        INSTRUCTOR CHART content
+        <div class="container p-4">
+          <div class="accordion" id="accordionExample">
+            <div class="mb-80 position-relative">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    AIRFLOW CONTROLLER
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body table-warning">
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 1</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-warning">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100">Flying With Flyers</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 2</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-primary">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100">Flying With Flyers</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 3</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-success">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100 w-sm-75">
+                          Flying With Flyers
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <i class="arrow-50 fa fa-long-arrow-down fa-5x" aria-hidden="true"></i>
+            </div>
+
+            <div class="mb-80 position-relative">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="collapseTwo"
+                  >
+                    AIRFLOW CONTROLLER
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body table-warning">
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 1</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-warning">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100">Flying With Flyers</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 2</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-primary">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100">Flying With Flyers</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 3</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-success">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100 w-sm-75">
+                          Flying With Flyers
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <i class="arrow-50 fa fa-long-arrow-down fa-5x" aria-hidden="true"></i>
+            </div>
+
+            <div class="mb-80 position-relative">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="true"
+                    aria-controls="collapseThree"
+                  >
+                    AIRFLOW CONTROLLER
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body table-warning">
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 1</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-warning">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-warning" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-warning w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100">Flying With Flyers</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 2</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-primary">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-primary w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100">Flying With Flyers</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-3 m-auto">
+                        <div>LEVEL 3</div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-75"
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-0"
+                                  role="progressbar"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="mb-2 p-2 rounded border border-2 border-success">
+                              <span>Barrel Roll</span>
+                              <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+
+                              <div class="mt-2 progress">
+                                <div
+                                  class="progress-bar bg-success w-100"
+                                  role="progressbar"
+                                  aria-valuenow="100"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-3 m-auto text-center">
+                        <button type="button" class="btn btn-dark w-100 w-sm-75">
+                          Flying With Flyers
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="tab-pane fade" id="logbook" role="tabpanel" aria-labelledby="logbook-tab">
         LOGBOOK content
-      </div> 
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">HIGH WIND SPEED</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-light" style="background: #8c8f74">
+              <div class="col m-auto">
+                <div>LOGBOOK INFO:</div>
+              </div>
+              <div class="col">
+                <div class="py-1">Date: 2004/9/28</div>
+                <div class="py-1">Instructor: Joe Winters</div>
+              </div>
+            </div>
+
+            <div class="px-2 py-4">
+              Flyers must be able to demonstrate controlled carving movements while head down /
+              belly flying. These carves in both directions should occur with head close to the
+              center of the tunnel.
+            </div>
+
+            <div class="row text-light text-center" style="background: #3c4355">
+              <div class="col m-auto">
+                <div>INSTRUCTOR LEVEL 2</div>
+              </div>
+              <div class="col">
+                <div class="py-1 h4 mb-0">50%</div>
+                <div class="py-1">COMPLETED</div>
+              </div>
+            </div>
+
+            <div class="text-center" style="background: #d3d3d3">
+              REQUIREMENTS FOR COMPLETETION:
+            </div>
+            <div class="p-2">
+              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+              HWS-Advanced Flyers (2004/9/28)
+            </div>
+            <div class="p-2">
+              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+              HWS-260+ Flyers (2004/9/28)
+            </div>
+            <div class="p-2">
+              <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+              HWS-260+ Flyers (2004/9/28)
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
