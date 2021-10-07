@@ -346,35 +346,48 @@
           <div class="container-lg p-4">
             <div class="mb-4 row justify-content-center justify-content-xl-end">
               <div class="col-12 col-sm-8 col-lg-4">
-                <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
+                <div
+                  class="btn-group w-100"
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio1"
+                    autocomplete="off"
                     onclick="visiblePath('static')"
-                  >
-                    Static path
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
+                    checked
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio1"> Static path</label>
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio2"
+                    autocomplete="off"
                     onclick="visiblePath('dynamic')"
-                  >
-                    Dynamic path
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio2"> Dynamic path</label>
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio3"
+                    autocomplete="off"
                     onclick="visiblePath('formation')"
-                  >
-                    Formation path
-                  </button>
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio3">Formation path</label>
                 </div>
               </div>
             </div>
 
             <div class="accordion" id="accordionExample2">
               <div class="row justify-content-center">
-                <div class="col col-sm-8">
+                <div class="col-12 col-md-8 accordion-div d-md-block" id="dynamic/static/formation">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item text-center m-auto">
                       <h2 class="accordion-header" id="headingOne">
@@ -409,7 +422,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -426,7 +439,7 @@
                                 <i class="fa fa-check-circle text-level-1" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -443,12 +456,12 @@
                                 <i class="fa fa-check-circle text-level-1" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -466,7 +479,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -484,7 +497,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -502,7 +515,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -520,7 +533,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -538,7 +551,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -562,16 +575,21 @@
 
                     <i
                       id="static"
-                      class="d-none d-sm-block arrow-25 fa fa-long-arrow-down fa-5x"
+                      class="d-none d-md-block arrow-25 fa fa-long-arrow-down fa-5x"
                       aria-hidden="true"
                     ></i>
                     <i
-                      id="formaion"
-                      class="d-none d-sm-block arrow-90 fa fa-long-arrow-down fa-5x"
+                      id="dynamic"
+                      class="d-none d-md-block arrow-50 fa fa-long-arrow-down fa-5x"
                       aria-hidden="true"
                     ></i>
                     <i
-                      class="d-sm-none arrow-50 fa fa-long-arrow-down fa-5x"
+                      id="formation"
+                      class="d-none d-md-block arrow-90 fa fa-long-arrow-down fa-5x"
+                      aria-hidden="true"
+                    ></i>
+                    <i
+                      class="d-md-none arrow-50 fa fa-long-arrow-down fa-5x"
                       aria-hidden="true"
                     ></i>
                   </div>
@@ -579,7 +597,7 @@
               </div>
 
               <div class="row">
-                <div class="col col-sm-6 col-md-8">
+                <div class="col-12 col-md-8 accordion-div d-md-block" id="dynamic/static">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -614,7 +632,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -631,7 +649,7 @@
                                 <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -648,7 +666,7 @@
                                 <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -665,25 +683,7 @@
                                 <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-4">
-                              <div
-                                class="
-                                  mb-2
-                                  p-2
-                                  button-background
-                                  rounded
-                                  border border-2 border-level-2
-                                "
-                                role="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                              >
-                                Head Up Out Face (LS)
-                                <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
-                              </div>
-                            </div>
-
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -701,7 +701,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -719,7 +719,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -737,7 +737,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -755,7 +755,25 @@
                               </div>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-xl-4">
+                            <div class="col-12 col-sm-6 col-xl-4">
+                              <div
+                                class="
+                                  mb-2
+                                  p-2
+                                  button-background
+                                  rounded
+                                  border border-2 border-level-2
+                                "
+                                role="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                              >
+                                Head Up Out Face (LS)
+                                <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-xl-4">
                               <div
                                 class="
                                   mb-2
@@ -779,21 +797,21 @@
 
                     <i
                       id="static"
-                      class="d-none d-sm-block arrow-25 fa fa-long-arrow-down fa-5x"
+                      class="d-none d-md-block arrow-25 fa fa-long-arrow-down fa-5x"
                       aria-hidden="true"
                     ></i>
                     <i
                       id="dynamic"
-                      class="d-none d-sm-block arrow-75 fa fa-long-arrow-down fa-5x"
+                      class="d-none d-md-block arrow-75 fa fa-long-arrow-down fa-5x"
                       aria-hidden="true"
                     ></i>
                     <i
-                      class="d-sm-none arrow-50 fa fa-long-arrow-down fa-5x"
+                      class="d-md-none arrow-50 fa fa-long-arrow-down fa-5x"
                       aria-hidden="true"
                     ></i>
                   </div>
                 </div>
-                <div class="col col-sm-6 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="formation">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -828,7 +846,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -845,7 +863,7 @@
                                 <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -862,7 +880,7 @@
                                 <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -879,7 +897,7 @@
                                 <i class="fa fa-check-circle text-level-2" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -910,7 +928,7 @@
               </div>
 
               <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="static">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -945,7 +963,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -962,7 +980,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -979,7 +997,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -996,7 +1014,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1013,12 +1031,12 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1035,7 +1053,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1052,7 +1070,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1082,7 +1100,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="dynamic">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -1117,7 +1135,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1134,7 +1152,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1151,7 +1169,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1168,7 +1186,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1185,12 +1203,12 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1207,7 +1225,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1224,7 +1242,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1253,7 +1271,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="formation">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -1288,7 +1306,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1305,7 +1323,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1322,7 +1340,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1339,7 +1357,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1356,12 +1374,12 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1378,7 +1396,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1395,7 +1413,7 @@
                                 <i class="fa fa-check-circle text-level-3" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1426,7 +1444,7 @@
               </div>
 
               <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="static">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -1461,7 +1479,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1478,7 +1496,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1495,7 +1513,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1512,7 +1530,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1529,12 +1547,12 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1551,7 +1569,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1568,7 +1586,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1598,7 +1616,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="dynamic">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -1633,7 +1651,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1650,7 +1668,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1667,7 +1685,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1684,7 +1702,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1701,12 +1719,12 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1723,7 +1741,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1740,7 +1758,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1769,7 +1787,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="formation">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -1804,7 +1822,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1821,7 +1839,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1838,7 +1856,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1855,7 +1873,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1872,12 +1890,12 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1894,7 +1912,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1911,7 +1929,7 @@
                                 <i class="fa fa-check-circle text-level-4" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1942,7 +1960,7 @@
               </div>
 
               <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="static">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -1977,7 +1995,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -1994,7 +2012,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2011,7 +2029,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2028,7 +2046,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2045,12 +2063,12 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2067,7 +2085,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2084,7 +2102,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2108,7 +2126,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="dynamic">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -2143,7 +2161,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2160,7 +2178,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2177,7 +2195,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2194,7 +2212,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2211,12 +2229,12 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2233,7 +2251,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2250,7 +2268,7 @@
                                 <i class="fa fa-check-circle text-level-5" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2274,7 +2292,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-md-4 d-none d-sm-block">
+                <div class="col-12 col-md-4 accordion-div d-md-block" id="formation">
                   <div class="mb-80 position-relative">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
@@ -2309,7 +2327,7 @@
                       >
                         <div class="accordion-body">
                           <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2326,7 +2344,7 @@
                                 <i class="fa fa-check-circle text-level-6" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2343,7 +2361,7 @@
                                 <i class="fa fa-check-circle text-level-6" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2360,7 +2378,7 @@
                                 <i class="fa fa-check-circle text-level-6" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2377,12 +2395,12 @@
                                 <i class="fa fa-check-circle text-level-6" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div class="mb-2 p-2 button-background rounded">
                                 Head Up Out Face (LS)
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2399,7 +2417,7 @@
                                 <i class="fa fa-check-circle text-level-6" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2416,7 +2434,7 @@
                                 <i class="fa fa-check-circle text-level-6" aria-hidden="true"></i>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                            <div class="col-12 col-sm-6 col-md-12">
                               <div
                                 class="
                                   mb-2
@@ -2824,7 +2842,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-3  m-auto text-center">
+                        <div class="col-12 col-sm-6 col-md-3 m-auto text-center">
                           <button type="button" class="btn btn-dark w-100 my-2">
                             Flying With Flyers
                           </button>
@@ -3497,18 +3515,32 @@
 
     <script>
       function visiblePath(id) {
-        const elements = document.getElementsByClassName('fa-long-arrow-down');
+        const arrows = document.getElementsByClassName('fa-long-arrow-down');
 
-        for (var i = 0; i < elements.length; i++) {
-          const element = elements[i];
+        for (let i = 0; i < arrows.length; i++) {
+          const arrow = arrows[i];
 
-          if (element.id === id) {
-            element.style.visibility = 'unset';
+          if (arrow.id === id) {
+            arrow.classList.remove('d-md-none');
           } else {
-            element.style.visibility = 'hidden';
+            arrow.classList.add('d-md-none');
+          }
+        }
+
+        const accordions = document.getElementsByClassName('accordion-div');
+
+        for (let i = 0; i < accordions.length; i++) {
+          const accordion = accordions[i];
+
+          if (accordion.id.includes(id)) {
+            accordion.classList.remove('d-none');
+          } else {
+            accordion.classList.add('d-none');
           }
         }
       }
+
+      visiblePath('static');
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
